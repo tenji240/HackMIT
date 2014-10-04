@@ -8,6 +8,7 @@ class Drug < ActiveRecord::Base
 		if count > 0
 			puts count
 			process_results(response, count, results)
+			puts "Processing..."
 			(51..count).step(50) do |x|
 				count, response = search_idapi(0, 50)
 				process_results(response, count, results)
@@ -16,7 +17,7 @@ class Drug < ActiveRecord::Base
 			puts 'no match'
 		end
 		# print the results
-		puts results
+		return results
 	end
 
 	# populate an array with the results
@@ -41,7 +42,8 @@ def self.search_idapi(query, offset, hits)
 	puts "#{query} is my query"
 	response = HTTParty.get("#{end_point}/search?query=#{query}&offset=#{offset}&hits=#{hits}", :digest_auth => auth)
 	puts "#{response} is my repsonse from the query"
-	count = 0
+	count = response['drugResultsOutput']['totalResults'].to_i
+	puts count
 	return count, response
 end
 
@@ -53,6 +55,7 @@ def self.process_results(response, count, results)
 		results << r
 	elsif count > 1
 		drugs.each do |drug|
+			puts drug
 			r = make_result(drug)
 			results << r
 		end
