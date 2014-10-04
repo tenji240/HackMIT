@@ -6,20 +6,28 @@
 #
 default: &default
   adapter: postgresql
-  pool: 5
+  username: drugview
+  pasword:
+  host: localhost
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: drugview-dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: drugview-test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: ec2-54-204-41-249.compute-1.amazonaws.com
+  database: daiqrs7d7peaki
+  username: lmhdsnjkahaazq
+  password: xja5exDvxP10ZY4q4NzZ7DEsM0
+  port: 5432
+  pool: 5
+
