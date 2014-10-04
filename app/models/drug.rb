@@ -10,7 +10,7 @@ class Drug < ActiveRecord::Base
 			process_results(response, count, results)
 			puts "Processing..."
 			(51..count).step(50) do |x|
-				count, response = search_idapi(0, 50)
+				count, response = search_idapi(search_query,0, 50)
 				process_results(response, count, results)
 			end
 		else
@@ -41,9 +41,11 @@ def self.search_idapi(query, offset, hits)
 	end_point = "https://lsapi-demo.thomson-pharma.com/ls-api-ws/ws/rs/drugs-v1/drug"
 	puts "#{query} is my query"
 	response = HTTParty.get("#{end_point}/search?query=#{query}&offset=#{offset}&hits=#{hits}", :digest_auth => auth)
+	if response.nil?
+		puts "sad face"
+	end
 	puts "#{response} is my repsonse from the query"
 	count = response['drugResultsOutput']['totalResults'].to_i
-	puts count
 	return count, response
 end
 
@@ -51,6 +53,7 @@ end
 def self.process_results(response, count, results)
 	drugs = response['drugResultsOutput']['SearchResults']['Drug']
 	if count == 1
+		puts drugs
 		r = make_result(drugs)
 		results << r
 	elsif count > 1

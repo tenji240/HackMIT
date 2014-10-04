@@ -1550,3 +1550,441 @@ NoMethodError (undefined method `[]' for nil:NilClass):
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 122ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 19:02:32 -0400
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:02:34 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 98ms (Views: 94.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:02:39 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tc3KvMlxRNt6vOoTv8UML5crEFH2hO5ZTdrqYI0jfnU=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 868ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:7:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/drugs/search" for 127.0.0.1 at 2014-10-04 19:02:49 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mDrug Load (0.4ms)[0m  SELECT  "drugs".* FROM "drugs"  WHERE "drugs"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Drug with 'id'=search):
+  app/controllers/drugs_controller.rb:73:in `set_drug'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/drugs/search" for 127.0.0.1 at 2014-10-04 19:02:55 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[36mDrug Load (0.4ms)[0m  [1mSELECT  "drugs".* FROM "drugs"  WHERE "drugs"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find Drug with 'id'=search):
+  app/controllers/drugs_controller.rb:73:in `set_drug'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 65ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 19:03:13 -0400
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:03:14 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:03:19 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tc3KvMlxRNt6vOoTv8UML5crEFH2hO5ZTdrqYI0jfnU=", "name"=>"test", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1242ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:7:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:03:24 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tc3KvMlxRNt6vOoTv8UML5crEFH2hO5ZTdrqYI0jfnU=", "name"=>"test", "commit"=>"Search"}
+Completed 500 Internal Server Error in 2947ms
+
+ArgumentError (wrong number of arguments (2 for 3)):
+  app/models/drug.rb:39:in `search_idapi'
+  app/models/drug.rb:13:in `block in main'
+  app/models/drug.rb:12:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started GET "/drugs/search" for 127.0.0.1 at 2014-10-04 19:04:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DrugsController#show as HTML
+  Parameters: {"id"=>"search"}
+  [1m[35mDrug Load (0.4ms)[0m  SELECT  "drugs".* FROM "drugs"  WHERE "drugs"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find Drug with 'id'=search):
+  app/controllers/drugs_controller.rb:73:in `set_drug'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 19:04:44 -0400
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:04:45 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:04:50 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 5821ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:13:in `block in main'
+  app/models/drug.rb:12:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:05:06 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 813ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:7:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.6ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:05:12 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 12624ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:13:in `block in main'
+  app/models/drug.rb:12:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:06:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 164ms (Views: 146.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:06:18 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:06:21 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 200 OK in 1695ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:06:23 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 826ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:7:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:06:27 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 200 OK in 1541ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:10:03 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1139ms (Views: 1138.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:10:07 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 93ms (Views: 91.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:10:11 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 200 OK in 1362ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:11:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 374ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:11:09 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:11:11 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1223ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:45:in `search_idapi'
+  app/models/drug.rb:7:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:14:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 131ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:14:43 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:14:47 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 200 OK in 2375ms (Views: 69.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:17:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 153ms (Views: 143.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 19:17:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 19:17:18 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 19:17:18 -0400
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 19:17:19 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 94ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 19:17:21 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzCL0I1slsMQ6KZxgf0gOvAgbHOZJ0PaQaggPbPMKik=", "name"=>"pain", "commit"=>"Search"}
+Completed 500 Internal Server Error in 1979ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:26:in `make_result'
+  app/models/drug.rb:61:in `block in process_results'
+  app/models/drug.rb:59:in `each'
+  app/models/drug.rb:59:in `process_results'
+  app/models/drug.rb:10:in `main'
+  app/controllers/drugs_controller.rb:56:in `search'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
