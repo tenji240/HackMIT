@@ -1,4 +1,11 @@
 class Drug < ActiveRecord::Base
+
+
+	def self.do_stuff(param)
+		puts "THIS IS MY #{param}"
+	end
+
+=begin
 	def main(search_query)
 		all = Object.new
 		auth = {:username => "USER", :password => "KEY"}
@@ -17,6 +24,8 @@ class Drug < ActiveRecord::Base
 		# print the results
 		puts results
 	end
+=end
+
 	# populate an array with the results
 	def make_result(drug)
 		result = Hash.new
