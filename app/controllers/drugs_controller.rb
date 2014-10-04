@@ -53,6 +53,8 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
+    Drug.main(params[:name])
+    redirect_to root_url
   end
 
   # DELETE /drugs/1

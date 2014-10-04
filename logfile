@@ -1,0 +1,17 @@
+LOG:  database system was shut down at 2014-10-04 17:05:49 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "Dave" does not exist
+FATAL:  database "Dave" does not exist
+FATAL:  role "drugview" does not exist
+FATAL:  role "drugview" does not exist
+FATAL:  database "Dave" does not exist
+FATAL:  database "Dave" does not exist
+FATAL:  role "drugview" does not exist
+FATAL:  database "createuser" does not exist
+FATAL:  role "database" does not exist
+FATAL:  role "DATABASE" does not exist
+FATAL:  database "CREATE" does not exist
+FATAL:  database "Dave" does not exist
+FATAL:  role "DAVe" does not exist
+FATAL:  database "DATABASE" does not exist

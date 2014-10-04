@@ -1,31 +1,11 @@
 <h1>Listing drugs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Company</th>
-      <th>Phase</th>
-      <th>Last modified</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @drugs.each do |drug| %>
-      <tr>
-        <td><%= drug.name %></td>
-        <td><%= drug.company %></td>
-        <td><%= drug.phase %></td>
-        <td><%= drug.last_modified %></td>
-        <td><%= link_to 'Show', drug %></td>
-        <td><%= link_to 'Edit', edit_drug_path(drug) %></td>
-        <td><%= link_to 'Destroy', drug, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<%= form_tag search_drugs_path do |f| %>
+<div class="form-group">
+  <%= label_tag 'name' %>
+  <%= text_field_tag 'name', nil, class:'form-control', style: 'width100%', placeholder:'Enter Name of Drug' %>
+</div>
+<%= submit_tag 'Search', class:'btn btn-larg btn-primary' %>
+<% end %> 
 
 <%= link_to 'New Drug', new_drug_path %>
