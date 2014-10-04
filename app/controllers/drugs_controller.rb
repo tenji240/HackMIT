@@ -51,6 +51,10 @@ class DrugsController < ApplicationController
     end
   end
 
+  # POST /drugs/search
+  def search
+  end
+
   # DELETE /drugs/1
   # DELETE /drugs/1.json
   def destroy
