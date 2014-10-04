@@ -44,3 +44,5 @@ gem 'json'
 
 #Use HTTP Party Gem
 gem 'httparty'
+
+ruby "2.1.2"
