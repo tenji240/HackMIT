@@ -53,7 +53,7 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
-    Drug.do_stuff(params[:name])
+    Drug.main(params[:name])
     redirect_to root_url
   end
 
