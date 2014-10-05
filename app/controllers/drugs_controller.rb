@@ -7,9 +7,10 @@ class DrugsController < ApplicationController
     @drugs = Drug.all
   end
 
-  # GET /drugs/1
-  # GET /drugs/1.json
+  # GET /drugs/:name
+  # GET /drugs/:name.json
   def show
+    @response = Drug.main(params[:name], params[:count])
   end
 
   # GET /drugs/new
@@ -53,8 +54,7 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
-    @response = Drug.main(params[:name])
-    render json: @response
+    redirect_to drug_url(:count => 20,:id=>params[:name])
   end
 
   # DELETE /drugs/1
@@ -70,7 +70,6 @@ class DrugsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_drug
-      @drug = Drug.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
