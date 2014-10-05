@@ -8378,3 +8378,224 @@ Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:11 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 23:19:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 370ms (Views: 346.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:19:56 -0400
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 23:19:57 -0400
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    redirect_to :action 'result' result_drugs_path(:co...
+                         ^
+/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...tion 'result' result_drugs_path(:count => 20,:name=>params[:...
+...                               ^):
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.3ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 23:19:57 -0400
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    redirect_to :action 'result' result_drugs_path(:co...
+                         ^
+/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...tion 'result' result_drugs_path(:count => 20,:name=>params[:...
+...                               ^):
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 23:20:08 -0400
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    redirect_to :action 'result', result_drugs_path(:c...
+                         ^
+/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected ',', expecting keyword_end
+...  redirect_to :action 'result', result_drugs_path(:count => ...
+...                               ^):
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 23:20:09 -0400
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+    redirect_to :action 'result', result_drugs_path(:c...
+                         ^
+/Users/Dave/Desktop/Github/HackMIT/app/controllers/drugs_controller.rb:57: syntax error, unexpected ',', expecting keyword_end
+...  redirect_to :action 'result', result_drugs_path(:count => ...
+...                               ^):
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+  app/controllers/drugs_controller.rb:57: syntax error, unexpected ',', expecting keyword_end
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/drugs" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+Processing by DrugsController#index as HTML
+  Rendered drugs/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:52 -0400
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:20:56 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"Discovery", "quantity"=>"10", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/result?count=20&name=Discovery
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/result?count=20&name=Discovery" for 127.0.0.1 at 2014-10-04 23:20:56 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"Discovery"}
+  Rendered drugs/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1582ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:20:57 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"Discovery", "quantity"=>"10", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/result?count=20&name=Discovery
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/result?count=20&name=Discovery" for 127.0.0.1 at 2014-10-04 23:20:57 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"Discovery"}
+  Rendered drugs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1309ms (Views: 76.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:20:59 -0400
