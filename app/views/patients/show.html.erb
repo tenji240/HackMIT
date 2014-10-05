@@ -32,11 +32,20 @@
 
 <p>Symptoms</p>
 <ul>
+<% multiple = false %>
+<% query_str = "" %>
 <% @patient.symptoms.each do |s| %>
   <li>
     <%= s.name %>
+    <% if !multiple %>
+     <% query_str = "indicationsPrimary:" + s.name.gsub(/\s/,'%20') %>
+     <% multiple = true %>
+    <% else %>
+    <% query_str = query_str + "%20AND%20indicationsPrimary:%20" + s.name.gsub(/\s/, '%20') %>
+    <% end %>
   </li>
 <% end %>
 </ul>
+<%= link_to 'Generate', result_drugs_path(:name => query_str, :count => 10) %> |
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
