@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<h1>Patient Data</h1>
 
 <p>
   <strong>First name:</strong>
@@ -38,5 +38,6 @@
   </li>
 <% end %>
 </ul>
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<%= link_to 'Edit', edit_patient_path(@patient), class: 'btn btn-default' %>
+<%= link_to 'Back', patients_path, class: 'btn btn-success' %>
+<%= link_to 'Home', root_path, class: 'btn btn-info' %>

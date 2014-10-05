@@ -1,11 +1,21 @@
 <h1>Listing drugs</h1>
 
 <%= form_tag search_drugs_path do |f| %>
-<div class="form-group">
+<div class="form-group form-section-left">
   <%= label_tag 'name' %>
-  <%= text_field_tag 'name', nil, class:'form-control', style: 'width100%', placeholder:'Enter Name of Drug' %>
-  <%= label_tag 'quantity' %>
-  <%= number_field_tag 'quantity', nil, class:'form-control', style: 'width100%', placeholder: 50 %>
+  <%= text_field_tag 'name', nil, class:'form-control', placeholder:'Enter Name of Drug' %>
 </div>
-<%= submit_tag 'Search', class:'btn btn-larg btn-primary' %>
+
+<div class="form-group form-section-right">
+  <%= label_tag 'quantity' %>
+  <%= number_field_tag 'quantity', nil, class:'form-control', placeholder: 50 %>
+</div>
+
+<div class="form-group">
+  <%= submit_tag 'Search', class:'btn btn-primary btn-lg' %>
+  <%= link_to 'Home', root_path, class: 'btn btn-info btn-lg' %>
+</div>
+
 <% end %> 
+
+
