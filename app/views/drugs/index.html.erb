@@ -4,6 +4,8 @@
 <div class="form-group">
   <%= label_tag 'name' %>
   <%= text_field_tag 'name', nil, class:'form-control', style: 'width100%', placeholder:'Enter Name of Drug' %>
+  <%= label_tag 'quantity' %>
+  <%= number_field_tag 'quantity', nil, class:'form-control', style: 'width100%', placeholder: 50 %>
 </div>
 <%= submit_tag 'Search', class:'btn btn-larg btn-primary' %>
 <% end %> 

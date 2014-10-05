@@ -53,7 +53,7 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
-    @response = Drug.main(params[:name])
+    @response = Drug.main(params[:name], params[:quantity])
     render json: @response
   end
 
