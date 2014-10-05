@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Results</h1>
 
 <div class="result-list">
@@ -16,23 +15,22 @@
         <th>Technology</th>
       </tr>
     </thead>
- 
-    <tfoot>
-      <tr>
-        <th>Name</th>
-        <th>Clinical Phase</th>
-        <th>Company</th>
-        <th>Technology</th>
-      </tr>
-    </tfoot>
 
     <tbody>
       <% item.each do |sub_item| %>
         <tr>
-          <th><%= sub_item["name"] %></th>
+          <th><%= link_to "#{sub_item['name']}", profile_drugs_path(sub_item) %></th>
           <th><%= sub_item["phaseHighest"] %></th>
           <th><%= sub_item["CompanyOriginator"] %></th>
-          <th><%= sub_item["Technologies"]["Technology"][0] %></th>
+          <% if sub_item["Technologies"]["Technology"].is_a?(Array) %>
+           <th>
+          <% sub_item["Technologies"]["Technology"].each do |tech| %>
+          <%= tech %>,
+          <% end %>
+          </th>
+          <% else %>
+          <th><%= sub_item["Technologies"]["Technology"] %></th>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
