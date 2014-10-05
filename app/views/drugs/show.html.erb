@@ -1,22 +1,53 @@
 <p id="notice"><%= notice %></p>
 
-<ol>
+<h1>Results</h1>
+
+<div class="result-list">
 <% if @response.length > 0 %>
 <% @response.each do |item| %>
   <% if item.is_a?(Array) %>
-    <% item.each do |sub_item| %>
-      <li>
-        <%= sub_item %>
-      </li>
-    <% end %>
+
+  <table id="drugTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Clinical Phase</th>
+        <th>Company</th>
+        <th>Technology</th>
+      </tr>
+    </thead>
+ 
+    <tfoot>
+      <tr>
+        <th>Name</th>
+        <th>Clinical Phase</th>
+        <th>Company</th>
+        <th>Technology</th>
+      </tr>
+    </tfoot>
+
+    <tbody>
+      <% item.each do |sub_item| %>
+        <tr>
+          <th><%= sub_item["name"] %></th>
+          <th><%= sub_item["phaseHighest"] %></th>
+          <th><%= sub_item["CompanyOriginator"] %></th>
+          <th><%= sub_item["Technologies"]["Technology"][0] %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
   <% else %>
-    <li>
-      <%= item %>
-    </li>
+    <div class="result-data">
+      <em>Total Results: <%= item %></em>
+      <hr>
+    </div>
   <% end %>
 <% end %>
 <% else %>
 There were no matches. Please press the back link below and do a search again.
-<% end %> -->
-</ol>
-<%= link_to 'Back', drugs_path %>
+<% end %>
+</div>
+<%= link_to 'Back', drugs_path, class: 'btn btn-primary' %>
+<%= link_to 'Home', root_path, class: 'btn btn-info' %>
+
