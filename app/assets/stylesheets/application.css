@@ -45,7 +45,7 @@ body p {
   border: 0px solid;
   border-radius: 15px;
   margin-top: 70px;
-  margin-bottom: 32px;
+  margin-bottom: 70px;
   padding-bottom: 16px;
 }
 
@@ -55,3 +55,44 @@ body p {
     display: flex;
     flex:1 0 auto;
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.footer {
+  padding: 0 15px 0 15px;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
