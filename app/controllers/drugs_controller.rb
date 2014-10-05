@@ -57,6 +57,10 @@ class DrugsController < ApplicationController
     redirect_to result_drugs_path(:count => params[:quantity],:name =>params[:name])
   end
 
+  def profile
+    @drug_profile = Drug.get_drug_profile(params[:id])
+  end
+
   # DELETE /drugs/1
   # DELETE /drugs/1.json
   def destroy

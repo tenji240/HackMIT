@@ -18,5 +18,5 @@
 //= require jquery_nested_form
 
 $(document).ready(function() {
-    $('#drugTable').dataTable();
-} );
+   $('#drugTable').dataTable();
+});
