@@ -1,2 +1,95 @@
-<%= @drug_profile %>
-<%= link_to 'Home', drugs_path, class: 'btn btn-info' %>
+<% drug = @drug_profile[1] %>
+<div class="row-fluid equal">
+  <div class="col-md-12">
+    <h3 class="text-center">Now Showing: <%= drug["name"] %>
+      <span class="label label-info">Highest Phase: <%= drug["phaseHighest"] %></span>
+    </h3>
+  </div>
+</div>
+
+<hr>
+
+<div class="row-fluild equal">
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Summary</h3>
+      </div>
+      <div class="panel-body">
+        <%= raw(drug["Summary"]) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">Companies</div>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li><strong>Origin:</strong> <%= drug["CompanyOriginator"] %></li>
+          <li><%= drug["CompaniesPrimary"]["Company"] %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row-fluid equal">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Primary Indicators</h3>
+      </div>
+      <div class="panel-body">
+        <% if drug["IndicationsPrimary"]["Indication"].nil? %>
+          <%= drug["IndicationsPrimary"]["Indication"] %>  
+        <% else %>
+          <p>No Values Found</p>
+        <% end %>      
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Primary Actions</h3>
+      </div>
+      <div class="panel-body">
+        <% if !drug["ActionsPrimary"].nil? %>
+          <%= drug["ActionsPrimary"]["Action"] %>
+        <% else %>
+          <p>No Values Found</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Technologies</h3>
+      </div>
+      <div class="panel-body">
+        <% if drug["Technologies"]["Technology"].size > 1 %>
+          <%= drug["Technologies"]["Technology"] %>
+        <% else %>
+          <ul>
+          <% drug["Technologies"]["Technology"].each do |tech| %>
+              <li><%= tech %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-fluid equal">
+  <div class="col-md-12">
+    <%= link_to 'Home', drugs_path, class: 'btn btn-info' %>
+  </div>
+</div>
