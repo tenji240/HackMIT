@@ -19,4 +19,11 @@
 
 $(document).ready(function() {
    $('#drugTable').dataTable();
+
+   $('#drugSearch').click(function(){
+    alert('WOAH');
+   });
+    
+   
 });
+
