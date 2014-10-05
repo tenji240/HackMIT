@@ -58,7 +58,8 @@ class DrugsController < ApplicationController
   end
 
   def profile
-    @drug_profile = params
+    puts params
+    @drug_profile = Drug.main("drugId:" + params[:name], 1)
   end
 
   # DELETE /drugs/1

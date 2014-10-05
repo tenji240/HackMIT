@@ -19,7 +19,7 @@
     <tbody>
       <% item.each do |sub_item| %>
         <tr>
-          <th><%= link_to "#{sub_item['name']}", profile_drugs_path(sub_item) %></th>
+          <th><%= link_to "#{sub_item['name']}", profile_drugs_path(:name => sub_item["id"]) %></th>
           <th><%= sub_item["phaseHighest"] %></th>
           <th><%= sub_item["CompanyOriginator"] %></th>
           <% if sub_item["Technologies"]["Technology"].is_a?(Array) %>

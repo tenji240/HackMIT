@@ -24,16 +24,4 @@ class Drug < ActiveRecord::Base
 		count = response['drugResultsOutput']['totalResults'].to_i
 		return count, response
 	end
-
-	def self.get_drug_profile(query)
-		auth = {:username => "Hackathon_07", :password => "MT79CL3S54RXZH2B"}
-		end_point = "https://lsapi-demo.thomson-pharma.com/ls-api-ws/ws/rs/drugs-v1/drug"
-		offset = 0
-		hits = 1;
-		#response = HTTParty.get("#{end_point}/search?query=drugId:#{query}&offset=#{offset}&hits=#{hits}", :digest_auth => auth)
-		response = HTTParty.get("#{end_point}/#{query}", :digest_auth => auth)
-		puts "#{response} is my response"
-		#count = response['drugResultsOutput']['totalResults'].to_i
-		return response
-	end
 end
