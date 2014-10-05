@@ -54,7 +54,7 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
-    redirect_to result_drugs_path(:count => 20,:name=>params[:name])
+    redirect_to result_drugs_path(:count => params[:quantity],:name =>params[:name])
   end
 
   # DELETE /drugs/1
