@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :drugs do 
     collection do
       post 'search'
-      get ':name', to: 'drugs#show'
+      get 'result', to: 'drugs#show'
     end
   end
 
