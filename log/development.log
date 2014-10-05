@@ -1988,3 +1988,244 @@ NoMethodError (undefined method `[]' for nil:NilClass):
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePatients (20141004232755)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (25.0ms)[0m  [1mCREATE TABLE "patients" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "address" character varying(255), "city" character varying(255), "state" character varying(255), "zip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141004232755"]]
+  [1m[36m (14.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSymptoms (20141004232853)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "symptoms" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141004232853"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:53:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined local variable or method `patients' for #<#<Class:0x00000104c393a8>:0x00000104c33f70>):
+    1: <div class="container">
+    2:   <h1>Welcome</h1>
+    3:   <%= link_to "drugs", drugs_path %>
+    4:   <%= link_to "patients", patients %>
+    5: </div>
+  app/views/welcome/index.html.erb:4:in `_app_views_welcome_index_html_erb___3552398821268911207_2187348000'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 19:53:35 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 509ms (Views: 508.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 19:53:36 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 19:53:37 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `accept_nested_attributes_for' for #<Class:0x0000010612a3e8>):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 19:53:37 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `accept_nested_attributes_for' for #<Class:0x00000101736bb0>):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 20:01:54 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `accept_nested_attributes_for' for #<Class:0x0000010118cae8>):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (7.5ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 95ms (Views: 84.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 20:02:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPatientIdToSymptoms (20141005000449)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (25.5ms)[0m  [1mALTER TABLE "symptoms" ADD COLUMN "patient_id" integer[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20141005000449"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 20:06:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.6ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 241ms (Views: 215.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 20:06:45 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 20:06:49 -0400
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.4ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.4ms)
