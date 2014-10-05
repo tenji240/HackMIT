@@ -1,39 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @drug.name %>
-</p>
-
-<p>
-  <strong>Name key:</strong>
-  <%= @drug.name_key %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @drug.company %>
-</p>
-
-<p>
-  <strong>Phase:</strong>
-  <%= @drug.phase %>
-</p>
-
-<p>
-  <strong>Last modified:</strong>
-  <%= @drug.last_modified %>
-</p>
-
-<p>
-  <strong>Change date:</strong>
-  <%= @drug.change_date %>
-</p>
-
-<p>
-  <strong>Added date:</strong>
-  <%= @drug.added_date %>
-</p>
-
-<%= link_to 'Edit', edit_drug_path(@drug) %> |
+<ol>
+<% @response.each do |item| %>
+  <% if item.is_a?(Array) %>
+    <% item.each do |sub_item| %>
+      <li>
+        <%= sub_item["phaseHighest"] %>
+      </li>
+    <% end %>
+  <% else %>
+    <li>
+      <%= item %>
+    </li>
+  <% end %>
+<% end %>
+</ol>
 <%= link_to 'Back', drugs_path %>
