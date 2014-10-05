@@ -2,17 +2,72 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.landing {
-  margin-top: 20%;
-  margin-bottom: auto;
-  border: 2px solid;
-  border-radius: 25px;
-  width: 50%;
-  background-color: #fff;
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+
+#master {
+  
+  /*
+  background: -webkit-linear-gradient(90deg, #4b6cb7 10%, #182848 90%); /* Chrome 10+, Saf5.1+ 
+  background:    -moz-linear-gradient(90deg, #4b6cb7 10%, #182848 90%); /* FF3.6+ 
+  background:     -ms-linear-gradient(90deg, #4b6cb7 10%, #182848 90%); /* IE10 
+  background:      -o-linear-gradient(90deg, #4b6cb7 10%, #182848 90%); /* Opera 11.10+ 
+  background:         linear-gradient(90deg, #4b6cb7 10%, #182848 90%); /* W3C 
+  */    
+
+  background: url(http://wallpaperus.org/wallpapers/06/213/science-dna-1920x1080-wallpaper-969422.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
 }
 
-.landing-inner {
-  padding-left: 22%;
-  padding-bottom: 5%;
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}

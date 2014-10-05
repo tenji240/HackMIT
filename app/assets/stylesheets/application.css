@@ -15,6 +15,36 @@
  *= require bootstrap.min
  */
 
+ @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic|Playball);
+
 body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+body h1 {
+  font-weight: 100;
+}
+
+body p {
+  font-weight: 200;
+}
+
+.navbar {
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.navbar-brand {
+   font-family: 'Playball', cursive;
+}
+
+#main {
+  background-color: #fff;
+  border: 0px solid;
+  border-radius: 15px;
+  margin-top: 70px;
+  margin-bottom: 32px;
   padding-bottom: 16px;
 }
