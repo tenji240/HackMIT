@@ -58,7 +58,7 @@ class DrugsController < ApplicationController
   end
 
   def profile
-    @drug_profile = Drug.get_drug_profile(params[:id])
+    @drug_profile = params
   end
 
   # DELETE /drugs/1
