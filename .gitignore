@@ -13,8 +13,9 @@
 /public/system
 /public/uploads
 # Ignore all logfiles and tempfiles.
-/log/*.log
+/log
 /tmp
+
 
 /coverage
 
