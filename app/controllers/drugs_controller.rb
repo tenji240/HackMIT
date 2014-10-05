@@ -54,7 +54,6 @@ class DrugsController < ApplicationController
 
   # POST /drugs/search
   def search
-    puts "#{params}"
     redirect_to drug_url(:count => 20,:id=>params[:name])
   end
 
@@ -71,7 +70,6 @@ class DrugsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_drug
-      #@drug = Drug.main(params[:name], 4)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -7617,3 +7617,344 @@ Started GET "/drugs" for 127.0.0.1 at 2014-10-04 22:57:46 -0400
 Processing by DrugsController#index as HTML
   Rendered drugs/index.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 176ms (Views: 174.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 22:59:25 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"Discovery", "quantity"=>"", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/Discovery?count=20
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/Discovery?count=20" for 127.0.0.1 at 2014-10-04 22:59:25 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"Discovery"}
+  Rendered drugs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1978ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 22:59:27 -0400
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:17 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:17 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 1237ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:24 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:24 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 805ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:28 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:28 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 1335ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.9ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:30 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:30 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 838ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:32 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:32 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 836ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:34 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain,arthriti", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain,arthriti?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain,arthriti?count=20" for 127.0.0.1 at 2014-10-04 23:02:34 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain,arthriti"}
+Completed 500 Internal Server Error in 1302ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/drug.rb:23:in `search_idapi'
+  app/models/drug.rb:6:in `main'
+  app/controllers/drugs_controller.rb:13:in `show'
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started POST "/drugs/search" for 127.0.0.1 at 2014-10-04 23:02:48 -0400
+Processing by DrugsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKyNe4GAm3OFE+jQrvTsE9VZTKaFCY+VsDqYPkYJ9f0=", "name"=>"pain", "quantity"=>"20", "commit"=>"Search"}
+Redirected to http://localhost:3000/drugs/pain?count=20
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/drugs/pain?count=20" for 127.0.0.1 at 2014-10-04 23:02:48 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain"}
+  Rendered drugs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1930ms (Views: 150.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:02:50 -0400
+
+
+Started GET "/drugs/pain?count=20" for 127.0.0.1 at 2014-10-04 23:05:29 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain"}
+  Rendered drugs/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 1883ms
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/views/drugs/show.html.erb:4: syntax error, unexpected '>'
+/Users/Dave/Desktop/Github/HackMIT/app/views/drugs/show.html.erb:5: syntax error, unexpected keyword_do, expecting keyword_end
+<% @response.each do |item| 
+                    ^
+/Users/Dave/Desktop/Github/HackMIT/app/views/drugs/show.html.erb:18: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/views/drugs/show.html.erb:4: syntax error, unexpected '>'
+  app/views/drugs/show.html.erb:5: syntax error, unexpected keyword_do, expecting keyword_end
+  app/views/drugs/show.html.erb:18: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.7ms)
+
+
+Started GET "/drugs/pain?count=20" for 127.0.0.1 at 2014-10-04 23:06:16 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain"}
+  Rendered drugs/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 1611ms
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/views/drugs/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/drugs/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/drugs/pain?count=20" for 127.0.0.1 at 2014-10-04 23:06:53 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain"}
+  Rendered drugs/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 1267ms
+
+SyntaxError (/Users/Dave/Desktop/Github/HackMIT/app/views/drugs/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/drugs/show.html.erb:25: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /Users/Dave/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+
+
+Started GET "/drugs/pain?count=20" for 127.0.0.1 at 2014-10-04 23:07:23 -0400
+Processing by DrugsController#show as HTML
+  Parameters: {"count"=>"20", "name"=>"pain"}
+  Rendered drugs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1786ms (Views: 160.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:25 -0400
