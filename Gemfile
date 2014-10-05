@@ -45,4 +45,7 @@ gem 'json'
 #Use HTTP Party Gem
 gem 'httparty'
 
+#gem Nested Form
+gem 'nested_form'
+
 ruby "2.1.2"
