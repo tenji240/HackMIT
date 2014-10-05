@@ -1,7 +1,8 @@
-<div class="landing">
-  <h1 class="text-center">Welcome</h1>
-  <div class="landing-inner">
-    <%= link_to "Search Drugs", drugs_path, class: 'btn btn-default btn-primary btn-lg' %>
-    <%= link_to "View My Patients", patients_path, class: 'btn btn-default btn-primary btn-lg' %>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="inner cover">
+      <h1 class="text-center">Hello Doctor, Welcome to Selector</h1>
+      <p class="text-center"><%= link_to "Research Pharmecuticals", drugs_path, class: 'btn btn-primary' %> <%= link_to "View My Patients", patients_path, class: 'btn btn-default' %></p>
+    </div>
   </div>
 </div>
