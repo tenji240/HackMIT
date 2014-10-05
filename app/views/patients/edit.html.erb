@@ -1,6 +1,9 @@
-<h1>Editing patient</h1>
+<h1>Editing Credentials for <%= @patient.first_name %> <%= @patient.last_name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @patient %> |
-<%= link_to 'Back', patients_path %>
+<br>
+
+<%= link_to 'Show', @patient, class: 'btn btn-primary' %>
+<%= link_to 'Back', patients_path, class: 'btn btn-default' %>
+<%= link_to 'Home', root_path, class: 'btn btn-info' %>
