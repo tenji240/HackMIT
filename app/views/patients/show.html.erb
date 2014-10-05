@@ -30,5 +30,13 @@
   <%= @patient.zip %>
 </p>
 
+<p>Symptoms</p>
+<ul>
+<% @patient.symptoms.each do |s| %>
+  <li>
+    <%= s.name %>s
+  </li>
+<% end %>
+</ul>
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>

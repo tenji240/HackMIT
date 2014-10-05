@@ -15,6 +15,7 @@ class PatientsController < ApplicationController
   # GET /patients/new
   def new
     @patient = Patient.new
+    3.times { @patient.symptoms.build }
   end
 
   # GET /patients/1/edit
@@ -69,6 +70,6 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:first_name, :last_name, :address, :city, :state, :zip)
+      params.require(:patient).permit(:first_name, :last_name, :address, :city, :state, :zip, symptoms_attributes:[:id, :name, :_destroy])
     end
 end

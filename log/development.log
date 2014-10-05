@@ -2229,3 +2229,573 @@ Processing by PatientsController#index as HTML
   [1m[36mPatient Load (0.4ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
   Rendered patients/index.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 22:58:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 541ms (Views: 528.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:10 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 22:58:12 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (No association found for name `questions'. Has it been defined yet?):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 22:58:12 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (No association found for name `questions'. Has it been defined yet?):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.3ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.7ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 118ms (Views: 113.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:20 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 22:58:31 -0400
+Processing by PatientsController#index as HTML
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `accepts_nested_attriutes_for' for #<Class:0x00000101bf1740>):
+  app/models/patient.rb:3:in `<class:Patient>'
+  app/models/patient.rb:1:in `<top (required)>'
+  app/controllers/patients_controller.rb:7:in `index'
+
+
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tembot/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.5ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 105ms (Views: 101.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 22:58:35 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 23:07:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.6ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 189ms (Views: 170.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:07:46 -0400
+
+
+Started GET "/patients/new" for 127.0.0.1 at 2014-10-04 23:07:47 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.erb (31.1ms)
+  Rendered patients/new.html.erb within layouts/application (36.7ms)
+Completed 200 OK in 168ms (Views: 135.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 197ms (Views: 184.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:05 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 23:12:07 -0400
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.6ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 110ms (Views: 105.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/new" for 127.0.0.1 at 2014-10-04 23:12:08 -0400
+Processing by PatientsController#new as HTML
+  Rendered patients/_form.html.erb (30.9ms)
+  Rendered patients/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 154ms (Views: 122.1ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/patients" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YIKd/vIKD3iLeOBesrATAiDKHimGMcUPNXtdqUTp3T8=", "patient"=>{"first_name"=>"Bill", "last_name"=>"Matt", "address"=>"8202 Coneflower Way", "city"=>"Gaithersburg", "state"=>"MD", "zip"=>"20877", "symptoms_attributes"=>{"1412478730964"=>{"name"=>"", "_destroy"=>"1"}, "1412478733437"=>{"name"=>"", "_destroy"=>"1"}, "1412478734063"=>{"name"=>"", "_destroy"=>"1"}, "1412478761648"=>{"name"=>"DEAD", "_destroy"=>"false"}, "1412478763718"=>{"name"=>"STUFF", "_destroy"=>"false"}}}, "commit"=>"Create Patient"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (31.1ms)[0m  INSERT INTO "patients" ("address", "city", "created_at", "first_name", "last_name", "state", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["address", "8202 Coneflower Way"], ["city", "Gaithersburg"], ["created_at", "2014-10-05 03:12:46.056933"], ["first_name", "Bill"], ["last_name", "Matt"], ["state", "MD"], ["updated_at", "2014-10-05 03:12:46.056933"], ["zip", "20877"]]
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "symptoms" ("created_at", "name", "patient_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-10-05 03:12:46.117407"], ["name", "DEAD"], ["patient_id", 1], ["updated_at", "2014-10-05 03:12:46.117407"]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "symptoms" ("created_at", "name", "patient_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-10-05 03:12:46.121668"], ["name", "STUFF"], ["patient_id", 1], ["updated_at", "2014-10-05 03:12:46.121668"]]
+  [1m[36m (2.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/patients/1
+Completed 302 Found in 75ms (ActiveRecord: 37.1ms)
+
+
+Started GET "/patients/1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPatient Load (0.9ms)[0m  SELECT  "patients".* FROM "patients"  WHERE "patients"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 92ms (Views: 87.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:12:46 -0400
+
+
+Started GET "/patients/1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1mSELECT  "patients".* FROM "patients"  WHERE "patients"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSymptom Load (0.6ms)[0m  SELECT "symptoms".* FROM "symptoms"  WHERE "symptoms"."patient_id" = $1  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 107ms (Views: 104.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:43 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 23:13:50 -0400
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.4ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/patients/1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YIKd/vIKD3iLeOBesrATAiDKHimGMcUPNXtdqUTp3T8=", "id"=>"1"}
+  [1m[35mPatient Load (0.7ms)[0m  SELECT  "patients".* FROM "patients"  WHERE "patients"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSymptom Load (0.4ms)[0m  SELECT "symptoms".* FROM "symptoms"  WHERE "symptoms"."patient_id" = $1  [["patient_id", 1]]
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "symptoms" WHERE "symptoms"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "symptoms" WHERE "symptoms"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 23ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.5ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 113ms (Views: 111.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-04 23:13:55 -0400

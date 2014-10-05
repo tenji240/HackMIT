@@ -1,4 +1,4 @@
-<%= form_for(@patient) do |f| %>
+<%= nested_form_for(@patient) do |f| %>
   <% if @patient.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
@@ -35,6 +35,14 @@
     <%= f.label :zip %><br>
     <%= f.text_field :zip %>
   </div>
+
+  <% f.fields_for :symptoms do |builder| %>
+    <%= builder.label :name, "Symptom Name" %>
+    <%= builder.text_field :name %>
+    <%= builder.link_to_remove "Remove this Symptom" %>
+  <% end %>
+  <p><%= f.link_to_add "Add a Symptom", :symptoms %></p>
+
   <div class="actions">
     <%= f.submit %>
   </div>
