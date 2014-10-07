@@ -18,11 +18,10 @@
 //= require jquery_nested_form
 
 $(document).ready(function() {
-   $('#drugTable').dataTable();
-
-   $('#drugSearch').click(function(){
-    alert('WOAH');
-   });
+  $('#drugTable').dataTable();
+  
+  $("[data-toggle='tooltip']").tooltip('show'); 
+  
     
    
 });
