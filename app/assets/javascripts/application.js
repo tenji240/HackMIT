@@ -20,6 +20,8 @@
 $(document).ready(function() {
   $('#drugTable').dataTable();
   
+  $('#patientTable').dataTable();
+  
   $("[data-toggle='tooltip']").tooltip('show'); 
   
     
