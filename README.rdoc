@@ -1,28 +1,23 @@
-== README
+Selector - Readme
+---------
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby version - 2.1.2p95
 
-Things you may want to cover:
+System dependencies
+-------------------
+  * PostgreSQL
+  * Rails v4.1.4
 
-* Ruby version
+Basic Setup
+------------
+  * if Postgres isn't installed
+    * `brew install postgresql`
+    * `initdb /usr/local/var/postgres -E utf8`
+  * `psql`
+  * `CREATE ROLE drugview LOGIN SUPERUSER;`
+  * `bundle install`
+  * `rake db:create`
+  * `rake db:setup`
+  * `rails server`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+_Submit new additions as Pull Requests_
