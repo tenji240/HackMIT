@@ -23103,3 +23103,237 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 18:40:5
 
 
 Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-06 18:40:56 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 13:42:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (7.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 223ms (Views: 212.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:15 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-09 13:42:18 -0400
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.8ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 144ms (Views: 122.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-09 13:42:39 -0400
+Processing by PatientsController#index as HTML
+  [1m[36mPatient Load (0.5ms)[0m  [1mSELECT "patients".* FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:40 -0400
+
+
+Started GET "/patients" for 127.0.0.1 at 2014-10-09 13:42:53 -0400
+Processing by PatientsController#index as HTML
+  [1m[35mPatient Load (0.4ms)[0m  SELECT "patients".* FROM "patients"
+  Rendered patients/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 136ms (Views: 134.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 13:42:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 13:42:56 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 100ms (Views: 99.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-09 13:44:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/symptoms.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/symptoms.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-09 13:44:28 -0400
